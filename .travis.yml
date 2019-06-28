@@ -26,4 +26,4 @@ script:
   # dismount the Tableau DMG volume
   #- hdiutil detach """${volName}""" -force
   - sudo hdiutil detach '/Volumes/Tableau Desktop'
-  - python3 -3 -m tdvt.tdvt --setup
+  - python3 -m tdvt.tdvt --setup
