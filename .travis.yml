@@ -12,4 +12,4 @@ script:
   #- python -3 -m pip install tdvt/tdvt-1.5.15.zip
   - python -3 -m pip install -e .
   - python -3 -m pip list
-  - curl -o https://www.tableau.com/downloads/desktop/mac tableau.dmg
+  - curl -o tableau.dmg https://www.tableau.com/downloads/desktop/mac
