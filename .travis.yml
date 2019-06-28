@@ -13,3 +13,7 @@ script:
   - python -3 -m pip install -e .
   - python -3 -m pip list
   - curl -o tableau.dmg https://www.tableau.com/downloads/desktop/mac
+  - sudo hdiutil attach tableau.dmg
+  - sudo installer -package /Volumes/tableau/tableau.pkg -target ${pwd}
+  - sudo hdiutil detach /Volumes/tableau
+  - python -3 -m tdvt.tdvt --setup
