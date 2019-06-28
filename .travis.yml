@@ -22,10 +22,8 @@ script:
   - sleep 10
   #- volName=`echo "$output" | tail -n 1 |sed 's;^.*\(/Volumes.*$\);\1;'`
   #- open "/Volumes/Tableau/Tableau Desktop.pkg"
-  - ls /Volumes/Tableau Desktop
   - sudo installer -pkg "/Volumes/Tableau Desktop/Tableau Desktop.pkg" -target /
   # dismount the Tableau DMG volume
   #- hdiutil detach """${volName}""" -force
   - sudo hdiutil detach '/Volumes/Tableau Desktop'
-  - python -3 -m tdvt.tdvt --setup
-  
+  - python3 -3 -m tdvt.tdvt --setup
