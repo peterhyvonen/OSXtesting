@@ -22,7 +22,8 @@ script:
   - sleep 10
   #- volName=`echo "$output" | tail -n 1 |sed 's;^.*\(/Volumes.*$\);\1;'`
   #- open "/Volumes/Tableau/Tableau Desktop.pkg"
-  - sudo installer -pkg "/Volumes/Tableau/Tableau Desktop.pkg" -target /
+  - ls /Volumes/Tableau Desktop
+  - sudo installer -pkg "/Volumes/Tableau Desktop/Tableau Desktop.pkg" -target /
   # dismount the Tableau DMG volume
   #- hdiutil detach """${volName}""" -force
   - sudo hdiutil detach '/Volumes/Tableau Desktop'
