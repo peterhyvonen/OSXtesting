@@ -1,4 +1,5 @@
 language: sh
 os: osx
 script:
-  - pwd
+  - git clone https://github.com/tableau/connector-plugin-sdk.git
+  - ls
