@@ -5,7 +5,7 @@ script:
   - python3 --version
   - git clone https://github.com/tableau/connector-plugin-sdk.git
   - cd connector-plugin-sdk
-  - py -3 setup.py sdist --formats gztar
-  - py -3 -m pip install tdvt-1.1.59.zip
-  - py -3 -m pip install -e .
-  - py -3 -m pip list
+  - python -3 setup.py sdist --formats gztar
+  - python -3 -m pip install tdvt-1.1.59.zip
+  - python -3 -m pip install -e .
+  - python -3 -m pip list
