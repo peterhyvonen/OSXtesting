@@ -26,4 +26,5 @@ script:
   # dismount the Tableau DMG volume
   #- hdiutil detach """${volName}""" -force
   - sudo hdiutil detach '/Volumes/Tableau Desktop'
+  - pip3 install defusedxml
   - python3 -m tdvt.tdvt --setup
