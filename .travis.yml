@@ -18,7 +18,7 @@ script:
   #- sudo installer -package '/Volumes/Tableau Desktop/tableau.pkg'
   #- sudo hdiutil detach '/Volumes/Tableau Desktop'
   # mount the DMG and copy Tableau.app to a folder
-  - output=`yes | hdiutil attach "<DMG_name>.dmg"`
+  - output=`yes | hdiutil attach "tableau.dmg"`
   - sleep 10
   - volName=`echo "$output" | tail -n 1 |sed 's;^.*\(/Volumes.*$\);\1;'`
   - open "/Volumes/Tableau/Tableau Desktop.pkg"
