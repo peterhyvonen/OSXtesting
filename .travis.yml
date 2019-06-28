@@ -7,8 +7,8 @@ script:
   - cd connector-plugin-sdk
   - cd tdvt
   - ls
-  - python -3 setup.py sdist --formats gztar
-  - find / -name tdvt-1.5.15
-  - python -3 -m pip install tdvt/tdvt-1.5.15.zip
+  #- python -3 setup.py sdist --formats gztar
+  #- find / -name tdvt-1.5.15
+  #- python -3 -m pip install tdvt/tdvt-1.5.15.zip
   - python -3 -m pip install -e .
   - python -3 -m pip list
