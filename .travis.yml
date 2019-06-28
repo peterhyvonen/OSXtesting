@@ -15,6 +15,6 @@ script:
   - curl -o tableau.dmg https://downloads.tableau.com/tssoftware/TableauDesktop-2019-2-1.dmg
   - ls
   - sudo hdiutil attach tableau.dmg
-  - sudo installer -package /Volumes/tableau/tableau.pkg -target ${pwd}
+  - sudo installer -package /Volumes/tableau/tableau.pkg
   - sudo hdiutil detach /Volumes/tableau
   - python -3 -m tdvt.tdvt --setup
