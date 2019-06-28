@@ -12,9 +12,9 @@ script:
   #- python -3 -m pip install tdvt/tdvt-1.5.15.zip
   - python -3 -m pip install -e .
   - python -3 -m pip list
-  - curl -o tableau.dmg https://www.tableau.com/downloads/desktop/mac
+  - curl -o tableau.dmg https://downloads.tableau.com/tssoftware/TableauDesktop-2019-2-1.dmg
   - ls
-  - sudo hdiutil attach -nobrowse tableau.dmg -mountpoint tableau
+  - sudo hdiutil attach tableau.dmg
   - sudo installer -package /Volumes/tableau/tableau.pkg -target ${pwd}
   - sudo hdiutil detach /Volumes/tableau
   - python -3 -m tdvt.tdvt --setup
