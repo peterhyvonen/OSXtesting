@@ -1,30 +1,24 @@
 language: sh
 os: osx
+services: postgres
 script:
   - python --version
   - python3 --version
+  # clone and install connector plugin
   - git clone https://github.com/tableau/connector-plugin-sdk.git
   - cd connector-plugin-sdk
   - cd tdvt
   - ls
-  #- python -3 setup.py sdist --formats gztar
-  #- find / -name tdvt-1.5.15
-  #- python -3 -m pip install tdvt/tdvt-1.5.15.zip
   - python -3 -m pip install -e .
   - python -3 -m pip list
+  # download tableau desktop
   - curl -o tableau.dmg https://downloads.tableau.com/tssoftware/TableauDesktop-2019-2-1.dmg
   - ls
+  # mount and install dmg
   - sudo hdiutil attach tableau.dmg
-  #- sudo installer -package '/Volumes/Tableau Desktop/tableau.pkg'
-  #- sudo hdiutil detach '/Volumes/Tableau Desktop'
-  # mount the DMG and copy Tableau.app to a folder
-  #- output=`yes | hdiutil attach "tableau.dmg"`
   - sleep 10
-  #- volName=`echo "$output" | tail -n 1 |sed 's;^.*\(/Volumes.*$\);\1;'`
-  #- open "/Volumes/Tableau/Tableau Desktop.pkg"
   - sudo installer -pkg "/Volumes/Tableau Desktop/Tableau Desktop.pkg" -target /
   # dismount the Tableau DMG volume
-  #- hdiutil detach """${volName}""" -force
   - sudo hdiutil detach '/Volumes/Tableau Desktop'
   - pip3 install defusedxml
   - python3 -m tdvt.tdvt --setup
