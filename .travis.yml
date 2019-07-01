@@ -1,17 +1,10 @@
 os: osx
 sudo: false
 #install:
-#   - export PG_DATA=$(brew --prefix)/var/postgres
-#   - pg_ctl -w start -l postgres.log --pgdata ${PG_DATA}
-#   - createuser -s postgres
-#   - psql -c 'create database testDb;' -U postgres
-#   - cat postgres.log
-#language: sh
-#os: osx
 before_script:
   - pg_ctl -D /usr/local/var/postgres start
   - createuser -s postgres
-  - psql -c 'create database kingofnothing;' -U postgres
+  - psql -c 'create database TestV1;' -U postgres
 script:
   - python --version
   - python3 --version
@@ -33,4 +26,10 @@ script:
   - sudo hdiutil detach '/Volumes/Tableau Desktop'
   - pip3 install defusedxml
   - python3 -m tdvt.tdvt --setup
+# postgres test
   - psql -c '\l' -U postgres
+  - psql -c 'CREATE USER testuser WITH PASSWORD test123 CREATEUSER' -U postgres
+  - psql -c 'grant all privileges on TestV1 to testuser' -U postgres
+  - find / -name 'load_batters.sql' 2>/dev/null  
+  - find / -name 'load_calcs.sql' 2>/dev/null
+  - find / -name 'load_staples.sql' 2>/dev/null
