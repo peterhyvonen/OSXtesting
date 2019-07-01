@@ -28,8 +28,9 @@ script:
   - python3 -m tdvt.tdvt --setup
 # postgres test
   - psql -c '\l' -U postgres
-  - psql -c 'CREATE USER testuser WITH PASSWORD test123 CREATEUSER' -U postgres
-  - psql -c 'grant all privileges on TestV1 to testuser' -U postgres
   - find / -name 'load_batters.sql' 2>/dev/null  
+  - cat Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql 
   - find / -name 'load_calcs.sql' 2>/dev/null
+  - cat Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_calcs.sql
   - find / -name 'load_staples.sql' 2>/dev/null
+  - cat Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_staples.sql
