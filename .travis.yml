@@ -33,3 +33,4 @@ script:
   - sudo hdiutil detach '/Volumes/Tableau Desktop'
   - pip3 install defusedxml
   - python3 -m tdvt.tdvt --setup
+  - psql -c '\l;' -U postgres
