@@ -1,7 +1,7 @@
 language: sh
 os: osx
 before_script:
-  - brew services start postgresql
+  - pg_ctl -D /usr/local/var/postgres start
   - psql -c 'create database travis_ci_test;' -U postgres
 test:
   adapter: postgresql
