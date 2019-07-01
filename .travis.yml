@@ -2,6 +2,7 @@ language: sh
 os: osx
 before_script:
   - pg_ctl -D /usr/local/var/postgres start
+  - psql -U postgres
   - create database travis_ci_test
 test:
   adapter: postgresql
