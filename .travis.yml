@@ -29,8 +29,8 @@ script:
 # postgres test
   - psql -c '\l' -U postgres
   - find / -name 'load_batters.sql' 2>/dev/null  
-  - cat Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql 
+  - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql 
   - find / -name 'load_calcs.sql' 2>/dev/null
-  - cat Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_calcs.sql
+  - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_calcs.sql
   - find / -name 'load_staples.sql' 2>/dev/null
-  - cat Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_staples.sql
+  - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_staples.sql
