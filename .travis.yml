@@ -1,7 +1,5 @@
 language: sh
 os: osx
-addons:
-  postgresql: "10.4"
 before_script:
   - pg_ctl -D /usr/local/var/postgres start
   - psql -c 'create database kingofnothing;' -U postgres
