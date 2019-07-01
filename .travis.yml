@@ -1,7 +1,7 @@
 language: sh
 os: osx
 services: 
-  - postgresql
+  - postgresql-10.4
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
 test:
