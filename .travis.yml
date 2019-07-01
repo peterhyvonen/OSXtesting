@@ -1,11 +1,6 @@
-addons:
-  postgresql: "10.4"
-language:
-  - objective-c
 os:
   - osx
-sudo:
-  - false
+sudo: false
 install:
    - export PG_DATA=$(brew --prefix)/var/postgres
    - pg_ctl -w start -l postgres.log --pgdata ${PG_DATA}
