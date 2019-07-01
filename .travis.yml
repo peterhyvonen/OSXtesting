@@ -1,6 +1,11 @@
 language: sh
 os: osx
 services: postgres
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+test:
+  adapter: postgresql
+  database: travis_ci_test
 script:
   - python --version
   - python3 --version
