@@ -2,11 +2,7 @@ language: sh
 os: osx
 before_script:
   - pg_ctl -D /usr/local/var/postgres start
-  - psql
-  - create database travis_ci_test
-test:
-  adapter: postgresql
-  database: travis_ci_test
+  - psql -c 'create database mycooldb;'
 script:
   - python --version
   - python3 --version
