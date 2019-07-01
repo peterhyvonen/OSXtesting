@@ -3,7 +3,7 @@ os: osx
 before_script:
   - pg_ctl -D /usr/local/var/postgres start
   - psql -c "CREATE USER pguser WITH PASSWORD 'pguser';"
-  - psql -c 'create database travis;'
+  - psql -c 'create database kingofnothing;'
 script:
   - python --version
   - python3 --version
