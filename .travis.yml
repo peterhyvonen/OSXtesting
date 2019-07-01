@@ -2,9 +2,8 @@ language: sh
 os: osx
 before_script:
   - pg_ctl -D /usr/local/var/postgres start
-  - createuser pguser
-  - psql -c 'ALTER USER pguser CREATEDB'
-  - psql -c 'create database travis_ci_test;' -U pguser
+  - createuser postgres
+  - psql -c 'create database travis_ci_test;' -U postgres
 script:
   - python --version
   - python3 --version
