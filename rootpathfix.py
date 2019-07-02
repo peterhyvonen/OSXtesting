@@ -10,6 +10,6 @@ for FileName in FileNames:
   with open(FileName, "w") as f:
     f.write(newText)
 with open(ConfigFile) as f:
-  newText=f.read().replace('', Path2Config)
+  newText=f.read().replace('Full Or Relataive/Path/to/tabquerytool.exe', Path2Config)
 with open(ConfigFile, "w") as f:
   f.write(newText)
