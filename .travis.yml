@@ -28,7 +28,7 @@ script:
   - python3 -m tdvt.tdvt --setup
 # postgres test
   - psql -c '\l' -U postgres
-  #- python /Users/travis/build/peterhyvonen/OSXtesting/rootpathfix.py
-  #- cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql  
-  #- cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_calcs.sql
-  #- cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_staples.sql
+  - python /Users/travis/build/peterhyvonen/OSXtesting/rootpathfix.py
+  - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql  
+  - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_calcs.sql
+  - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_staples.sql
