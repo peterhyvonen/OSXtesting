@@ -33,8 +33,8 @@ script:
   - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_calcs.sql
   - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_staples.sql
   - cat config/tdvt/tdvt_override.ini
-  - python3 -m tdvt -h
-  - python3 -m tdvt --run postgres_generic_example
-  - python3 -m tdvt --run postgres_generic_example -e
-  - python3 -m tdvt --run postgres_generic_example -q
-  - python3 -m tdvt --list postgres_odbc
+  - python3 -m tdvt.tdvt -h
+  - python3 -m tdvt.tdvt --run postgres_generic_example
+  - python3 -m tdvt.tdvt --run postgres_generic_example -e
+  - python3 -m tdvt.tdvt --run postgres_generic_example -q
+  - python3 -m tdvt.tdvt --list postgres_odbc
