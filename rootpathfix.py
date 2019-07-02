@@ -1,3 +1,6 @@
-import fileinput with fileinput.FileInput(filename, inplace=True, backup='.bak') as file:
-  for line in file:
-    print(line.replace('<root_directory>', '/Users/travis/build/peterhyvonen/OSXtesting'), end='')
+import fileinput 
+FileName = 'load_batters.sql'
+with open(FileName) as f:
+newText=f.read().replace('<root_directory>', '/Users/travis/build/peterhyvonen/OSXtesting')
+with open(FileName, "w") as f:
+f.write(newText)
