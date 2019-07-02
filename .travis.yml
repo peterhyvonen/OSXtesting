@@ -29,11 +29,7 @@ script:
 # postgres test
   - psql -c '\l' -U postgres
   - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql
-  - python
-  - import fileinput
-  - with fileinput.FileInput(filename, inplace=True, backup='.bak') as file:
-  - for line in file:
-  - print(line.replace('<root_directory>', '/Users/travis/build/peterhyvonen/OSXtesting'), end='')
+  - python import fileinput; with fileinput.FileInput(filename, inplace=True, backup='.bak') as file:; for line in file:; print(line.replace('<root_directory>', '/Users/travis/build/peterhyvonen/OSXtesting'), end='');
   - exit()
   - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql  
   - find / -name 'load_calcs.sql' 2>/dev/null
