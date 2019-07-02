@@ -28,7 +28,7 @@ script:
   - python3 -m tdvt.tdvt --setup
 # postgres test
   - psql -c '\l' -U postgres
-  - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql
+  - find / -name pathfix.py 2>/dev/null
   - python pathfix.py
   - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql  
   - find / -name 'load_calcs.sql' 2>/dev/null
