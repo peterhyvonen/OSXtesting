@@ -32,3 +32,5 @@ script:
   - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql  
   - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_calcs.sql
   - cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_staples.sql
+  - tdvt -h
+  - tdvt --run postgres_generic_example
